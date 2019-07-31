@@ -1,8 +1,9 @@
+var map;
 // Initialize and add the map
 function initMap() {
   // the map
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 0, center: {lat: 0, lng: 0}});
+  map = new google.maps.Map(
+      document.getElementById('map'), {center: {lat: 0, lng: 0}, zoom: 0});
 
   // markers
   var yellowstone = new google.maps.Marker({position: {lat: 44.449904, lng: -110.589359}, map: map});
