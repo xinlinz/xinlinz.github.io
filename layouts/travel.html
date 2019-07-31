@@ -13,8 +13,10 @@
       }
       /* Set the size of the div element that contains the map */
       #map {
-        height: 400px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
+        margin-top: 1.5%;
+        left: 20%;
+        height: 500px;  /* The height is 400 pixels */
+        width: 60%;  /* The width is the width of the web page */
        }
     </style>
   </head>
@@ -48,14 +50,41 @@
       // Initialize and add the map
       function initMap() {
         // the map
+        var centerPos = {lat: 40.080363, lng: -89.350603};
         var map = new google.maps.Map(
-            document.getElementById('map'), {center: {lat: 0, lng: 0}, zoom: 0});
+            document.getElementById('map'), {center: centerPos, zoom: 3.8});
 
         // markers
-        var yellowstone = new google.maps.Marker({position: {lat: 44.449904, lng: -110.589359}, map: map});
-        var bryce = new google.maps.Marker({position: {lat: 37.619637, lng: -112.230383}, map: map});
-        var zion = new google.maps.Marker({position: {lat: 37.321395, lng: -113.028129}, map: map});
-        var vancouver = new google.maps.Marker({position: {lat: 49.271612, lng: -123.139631}, map: map});
+        var locations = [
+          // html page #, location name, lat, long
+          ["0", 'losangeles', 34.046192, -118.267204],
+          ["0", 'sandiego', 32.793566, -117.235879],
+          ["0", 'palmsprings', 33.829193, -116.548635],
+          ["1", 'yellowstone', 44.449904, -110.589359],
+          ["1", 'bryce', 37.619637, -112.230383],
+          ["1", 'zion', 37.321395, -113.028129],
+          ["2", 'slc', 40.759258, -111.905417],
+          ["2", 'seattle', 47.607654, -122.318743],
+          ["2", 'vancouver', 49.271612, -123.139631],
+          ["3", 'hawaii', 21.308244, -157.856973],
+          ["3", 'newyork', 40.680042, -73.939921],
+          ["3", 'solvang', 34.595841, -120.137583],
+          ["4", 'mammoth', 37.625634, -118.972658],
+          ["4", 'yosemite', 37.871014, -119.524934],
+          ["4", 'grandcanyon', 36.100027, -112.208452],
+          ["5", 'beijing', 39.912904, 116.416476],
+          ["5", 'zhanjiang', 21.265156, 110.345312],
+        ]
+
+        for (var i = 0; i < locations.length; i++) {
+          marker = new google.maps.Marker({position: {lat: locations[i][2], lng: locations[i][3]}, map: map});
+          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+              var addr = "travel".concat(locations[i][0], ".html");
+              window.open(addr);
+            }
+          })(marker, i));
+        }
       }
     </script>
 
