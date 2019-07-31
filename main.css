@@ -2,7 +2,7 @@ body {
   background: url(https://images.unsplash.com/photo-1518171802599-4cd16785f93a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1594&q=80);
   background-size: cover;
   background-position: center;
-  font-family: Lato;
+  font-family: 'Roboto', sans-serif;
   color: white;
 }
 
@@ -22,10 +22,9 @@ html {
 h1 {
   font-weight: 700;
   font-size: 4em;
+  font-family: 'Roboto', sans-serif;
 }
 
-hr {
-  width: 400px;
-  border-top: 1px solid #f8f8f8;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+h3 {
+  font-family: 'Pacifico', cursive;
 }
