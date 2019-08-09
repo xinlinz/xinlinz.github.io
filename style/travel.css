@@ -2,7 +2,24 @@ body {
   background-color: lightgrey;
 }
 
-#map {
-  height: 50%;
-  width: 100%;
+img {
+  width: 45%;
+  float: center;
+  margin: 2%;
+}
+
+p {
+  font-family: 'Darker Grotesque', sans-serif;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-left: 3%;
+  width: 50%;
+  margin-bottom: auto;
+  font-size: 40px;
+  font-weight: 1200;
+  text-transform: uppercase;
+}
+
+footer {
+  margin-left: 2%;
 }
