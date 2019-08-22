@@ -29,7 +29,7 @@ h3 {
   font-family: 'Pacifico', cursive;
 }
 
-#footer {
+#foot {
   position: absolute;
   bottom: 5%;
   width: 100%;
@@ -37,7 +37,7 @@ h3 {
   left: 90%;
 }
 
-#footer i.fas, i.fab {
+#foot i.fas, i.fab {
   color: grey;
   font-size: 1.5rem;
 }
